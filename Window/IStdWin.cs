@@ -7,6 +7,7 @@ using BeagleAPI.Misc;
 
 namespace BeagleAPI.Window
 {
+    [Flags]
     public enum CLOSE_RESULT
     {
         None = 0x00,
