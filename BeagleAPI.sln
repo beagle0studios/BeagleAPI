@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeagleAPI", "BeagleAPI.csproj", "{F4683E22-5EAF-4775-93D5-83FF46A0D6DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeagleAPITest", "..\BeagleAPITest\BeagleAPITest.csproj", "{972DFDC4-A9FB-4748-9211-C3F9D4C98F0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4683E22-5EAF-4775-93D5-83FF46A0D6DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4683E22-5EAF-4775-93D5-83FF46A0D6DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4683E22-5EAF-4775-93D5-83FF46A0D6DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4683E22-5EAF-4775-93D5-83FF46A0D6DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{972DFDC4-A9FB-4748-9211-C3F9D4C98F0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{972DFDC4-A9FB-4748-9211-C3F9D4C98F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{972DFDC4-A9FB-4748-9211-C3F9D4C98F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{972DFDC4-A9FB-4748-9211-C3F9D4C98F0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

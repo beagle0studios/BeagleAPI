@@ -1,0 +1,12 @@
+C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\bin\Release\AppPacks\Browser\HTML\About\about_white.html
+C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\bin\Release\BeagleAPI.dll
+C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\bin\Release\BeagleAPI.pdb
+C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\obj\Release\BeagleAPI.csprojResolveAssemblyReference.cache
+C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\obj\Release\BeagleAPI.AppPacks.Browser.Beagle_X.resources
+C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\obj\Release\BeagleAPI.Controls.ButtonE.resources
+C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\obj\Release\BeagleAPI.Properties.Resources.resources
+C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\obj\Release\BeagleAPI.Window.StdW.StdWin.resources
+C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\obj\Release\BeagleAPI.csproj.GenerateResource.Cache
+C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\obj\Release\BeagleAPI.dll
+C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\obj\Release\BeagleAPI.pdb
+C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\obj\Release\BeagleAPI.SysDebug.ErrLog.resources

@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4683E22-5EAF-4775-93D5-83FF46A0D6DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BeagleAPI</RootNamespace>
+    <AssemblyName>BeagleAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\AttributeUsage.cs" />
+    <Compile Include="Attributes\BeagleAttrAttribute.cs" />
+    <Compile Include="Controls\ButtonE.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ButtonE.Designer.cs">
+      <DependentUpon>ButtonE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ButtonStdWin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ButtonStdWin.Designer.cs">
+      <DependentUpon>ButtonStdWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ControlB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlB.Designer.cs">
+      <DependentUpon>ControlB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Grouper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Grouper.Designer.cs">
+      <DependentUpon>Grouper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IButtonE.cs" />
+    <Compile Include="Controls\IControlB.cs" />
+    <Compile Include="Controls\PanelB.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PanelB.Designer.cs">
+      <DependentUpon>PanelB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Resizing.cs" />
+    <Compile Include="Controls\Tabs\ITabControl.cs" />
+    <Compile Include="Controls\Tabs\TabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Tabs\TabPageE.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\UnityButtonExtended.cs" />
+    <Compile Include="Controls\WebBrowserE.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Enums\AppPacks\APPLIST.cs" />
+    <Compile Include="Enums\System\DesignPacks.cs" />
+    <Compile Include="Enums\System\RESULTCODES.cs" />
+    <Compile Include="Files\Serialize\Serializer.cs" />
+    <Compile Include="Files\Zip.cs" />
+    <Compile Include="Initialize.cs" />
+    <Compile Include="Misc\BConvert.cs" />
+    <Compile Include="Misc\BeagleBaseBase.cs" />
+    <Compile Include="Misc\Calculator.cs" />
+    <Compile Include="Misc\Comparer.cs" />
+    <Compile Include="Misc\ConfigInfoBeagleHome.cs" />
+    <Compile Include="Misc\Cryption.cs" />
+    <Compile Include="Misc\DictionaryEx.cs" />
+    <Compile Include="Misc\Dixonary.cs" />
+    <Compile Include="Misc\Extensioning\Extensions.cs" />
+    <Compile Include="Misc\Gaming\ComponentCounter.cs" />
+    <Compile Include="Misc\Gaming\ComponentManager.cs" />
+    <Compile Include="Misc\Gaming\IComponentCounter.cs" />
+    <Compile Include="Misc\IBeagleable.cs" />
+    <Compile Include="Misc\IBeagleBase.cs" />
+    <Compile Include="Misc\IBeagleCompare.cs" />
+    <Compile Include="Misc\IBeagleManagable.cs" />
+    <Compile Include="Misc\IBeagleMovable.cs" />
+    <Compile Include="Misc\IBeaglePrint.cs" />
+    <Compile Include="Misc\IBeagleProtect.cs" />
+    <Compile Include="Misc\Indexing_D.cs" />
+    <Compile Include="Misc\Initialization.cs" />
+    <Compile Include="Misc\IPrinter.cs" />
+    <Compile Include="Misc\MultithreadingTimer.cs" />
+    <Compile Include="Misc\Printer.cs" />
+    <Compile Include="Misc\ProtectionManager.cs" />
+    <Compile Include="Misc\SearchFor.cs" />
+    <Compile Include="Misc\SimpleDatabase.cs" />
+    <Compile Include="Misc\BeagleText.cs" />
+    <Compile Include="Misc\Word.cs" />
+    <Compile Include="OS\BaseDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\BaseDesktop.Designer.cs">
+      <DependentUpon>BaseDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\BeagleBaseComponent.cs" />
+    <Compile Include="OS\BOSSWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\BOSSWnd.Designer.cs">
+      <DependentUpon>BOSSWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\EntryPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\EntryPoint.Designer.cs">
+      <DependentUpon>EntryPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\IBeagleOSApp.cs" />
+    <Compile Include="OS\IBeagleOSWindow.cs" />
+    <Compile Include="OS\LoadObjectsStatic.cs" />
+    <Compile Include="OS\PlusAppControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OS\PlusAppControl.Designer.cs">
+      <DependentUpon>PlusAppControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OS\TaskMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OS\TaskMan.Designer.cs">
+      <DependentUpon>TaskMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\IBeagleAppliance.cs" />
+    <Compile Include="Plugins\IBeagleHomePlugInterface.cs" />
+    <Compile Include="Plugins\IBeaglePlugin.cs" />
+    <Compile Include="Plugins\PluginLoader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StandardMessageCentre\SMC.cs" />
+    <Compile Include="SysDebug\Counter_D.cs" />
+    <Compile Include="SysDebug\DelegatesEvents\DelegatesNames.cs" />
+    <Compile Include="SysDebug\DelegatesEvents\EventArgs_B.cs" />
+    <Compile Include="SysDebug\ErrLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysDebug\ErrLog.Designer.cs">
+      <DependentUpon>ErrLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window\IStdWin.cs" />
+    <Compile Include="Window\Manager\ManageHelper.cs" />
+    <Compile Include="Window\Manager\ManagerDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window\Manager\ManagerDisplay.Designer.cs">
+      <DependentUpon>ManagerDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window\Manager\WindowManager.cs" />
+    <Compile Include="Window\Message\Messages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window\Message\Messages.Designer.cs">
+      <DependentUpon>Messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window\PassPrompts\PassPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window\PassPrompts\PassPrompt.Designer.cs">
+      <DependentUpon>PassPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window\PreviewWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window\PreviewWindow.Designer.cs">
+      <DependentUpon>PreviewWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window\StdW\StdWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window\StdW\StdWin.Designer.cs">
+      <DependentUpon>StdWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinServices\ServiceConnection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ButtonE.resx">
+      <DependentUpon>ButtonE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Grouper.resx">
+      <DependentUpon>Grouper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\BaseDesktop.resx">
+      <DependentUpon>BaseDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\BOSSWnd.resx">
+      <DependentUpon>BOSSWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\EntryPoint.resx">
+      <DependentUpon>EntryPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\PlusAppControl.resx">
+      <DependentUpon>PlusAppControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OS\TaskMan.resx">
+      <DependentUpon>TaskMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysDebug\ErrLog.resx">
+      <DependentUpon>ErrLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\Manager\ManagerDisplay.resx">
+      <DependentUpon>ManagerDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\Message\Messages.resx">
+      <DependentUpon>Messages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\PassPrompts\PassPrompt.resx">
+      <DependentUpon>PassPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\PreviewWindow.resx">
+      <DependentUpon>PreviewWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\StdW\StdWin.resx">
+      <DependentUpon>StdWin.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize_maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circled_right_21600.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circled_left_21600.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_6rows_fade_120.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\red_circ.png" />
+    <None Include="Resources\green_circ.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
