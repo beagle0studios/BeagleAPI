@@ -229,6 +229,19 @@ namespace BeagleAPI.Window.StdW
             }
         }
 
+        public bool IsActive
+        {
+            get
+            {
+                return Focused;
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         #endregion
 
         #region Methods
@@ -341,7 +354,17 @@ namespace BeagleAPI.Window.StdW
 
         public void PrintFile(IPrinter printer)
         {
-            //nothing to do right now.
+            //nothing to do right now
+        }
+
+        public void AddControl(Control control)
+        {
+            Controls.Add(control);
+        }
+
+        public void RefreshSelf()
+        {
+            Refresh();
         }
 
         #endregion

@@ -36,9 +36,12 @@ namespace BeagleAPI.Window
         void Hide();
         void Show();
         void Close();
+        void RefreshSelf();
+        void AddControl(System.Windows.Forms.Control control);
         bool ShowInTaskman { get; }
         bool ExitOnClose { get; set; }
         bool IsDisposed { get; }
+        bool IsActive { get; set; }
         DateTime CreationTime { get; set; }
     }
 }
