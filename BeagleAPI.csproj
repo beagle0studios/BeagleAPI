@@ -100,6 +100,7 @@
     <Compile Include="Files\Serialize\Serializer.cs" />
     <Compile Include="Files\Zip.cs" />
     <Compile Include="Initialize.cs" />
+    <Compile Include="Misc\ActionMethods\Predefined.cs" />
     <Compile Include="Misc\BConvert.cs" />
     <Compile Include="Misc\BeagleBaseBase.cs" />
     <Compile Include="Misc\Calculator.cs" />
