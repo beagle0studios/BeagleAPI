@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//ORIGINAL USER'S ADDTITION
 namespace BeagleAPI.Misc
 {
     public enum CalculatorType
