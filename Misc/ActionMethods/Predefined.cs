@@ -8,7 +8,7 @@ namespace BeagleAPI.Misc.ActionMethods
 {
     public sealed class Predefined
     {
-        public void CreateFormWithinPanel(Window.StdW.StdWin form, System.Windows.Forms.Panel panel)
+        public static void CreateFormWithinPanel(Window.StdW.StdWin form, System.Windows.Forms.Panel panel)
         {
             form.TopLevel = false;
             form.AutoScroll = true;
