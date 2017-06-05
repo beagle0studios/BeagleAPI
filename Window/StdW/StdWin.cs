@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace BeagleAPI.Window.StdW
 {
-    public partial class StdWin : Form, IStdWin
+    public partial class StdWin : Form, IStdWin, IBeaglePrint
     {
         #region Fields
 
@@ -220,6 +220,15 @@ namespace BeagleAPI.Window.StdW
             }
         }
 
+        public IPrinter GetPrinter
+        {
+            get
+            {
+                Printer printer = new Printer();
+                return printer;
+            }
+        }
+
         #endregion
 
         #region Methods
@@ -328,6 +337,11 @@ namespace BeagleAPI.Window.StdW
         public void OnPropertyChanged(PropertyChangedEventBeagle e)
         {
             PropertyChanged?.Invoke(new object(), e);
+        }
+
+        public void PrintFile(IPrinter printer)
+        {
+            //nothing to do right now.
         }
 
         #endregion
