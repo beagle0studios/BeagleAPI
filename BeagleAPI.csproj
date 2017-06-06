@@ -56,6 +56,12 @@
     <Compile Include="Controls\ButtonE.Designer.cs">
       <DependentUpon>ButtonE.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ButtonP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ButtonP.Designer.cs">
+      <DependentUpon>ButtonP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ButtonStdWin.cs">
       <SubType>Component</SubType>
     </Compile>

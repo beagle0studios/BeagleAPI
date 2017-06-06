@@ -22,7 +22,6 @@ namespace BeagleAPI.Controls
         private IStdWin PARENT_WIND;
         private IControlB PARENT_CONTROL;
         private bool IsParentControl = false;
-        private PreviewWindow win;
         private string name_;
         private bool IsFullyDefined = false;
         private DesignPacks design;
@@ -65,7 +64,6 @@ namespace BeagleAPI.Controls
             eventArgs = new ButtonEClickedEventArgs();
             PARENT_WIND = parent;
             name_ = Name + DateTime.Now.ToString();
-            win = new PreviewWindow(PARENT_WIND);
             design = DesignPacks.Standard;
             RegisterToBaseBase();
             IsFullyDefined = true;
@@ -81,7 +79,6 @@ namespace BeagleAPI.Controls
             IsParentControl = true;
             design = DesignPacks.Standard;
             name_ = Name + DateTime.Now.ToString();
-            win = new PreviewWindow(PARENT_WIND);
             RegisterToBaseBase();
             IsFullyDefined = true;
             MouseHover += ButtonE_MouseHover;
@@ -100,7 +97,6 @@ namespace BeagleAPI.Controls
             PARENT_WIND = parent;
             name_ = Name + DateTime.Now.ToString();
             design = DesignPacks.Standard;
-            win = new PreviewWindow(PARENT_WIND);
             RegisterToBaseBase();
             IsFullyDefined = true;
             MouseHover += ButtonE_MouseHover;
@@ -185,23 +181,15 @@ namespace BeagleAPI.Controls
         protected override void OnMouseHover(EventArgs e)
         {
             base.OnMouseHover(e);
-            
         }
 
         protected override void OnMouseLeave(EventArgs e)
         {
             base.OnMouseLeave(e);
-            //win.Close();
         }
 
         private void ButtonE_MouseHover(object sender, EventArgs e)
         {
-            //if (EnablePreview)
-            //{
-            //    win.Location = Location;
-            //    win.Show();
-            //    Focus();
-            //}
         }
     }
 }

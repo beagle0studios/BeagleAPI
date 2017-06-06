@@ -12,28 +12,20 @@ namespace BeagleAPI.Window
 {
     public partial class PreviewWindow : Form
     {
-        private StdW.StdWin WIND;
+        Form wind_;
 
-        public PreviewWindow(IStdWin window)
+        public PreviewWindow(Form window)
         {
-            StdW.StdWin frm = (StdW.StdWin)window;
-
             InitializeComponent();
-            frm.TopLevel = false;
-            frm.Parent = this;
-            WIND = frm;
-            Location = Cursor.Position;
-            TopMost = true;
+            wind_ = window;
         }
 
-        protected override void OnShown(EventArgs e)
+        private void PreviewWindow_Load(object sender, EventArgs e)
         {
-            base.OnShown(e);
-            WIND.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
+            wind_.TopLevel = false;
+            wind_.AutoScroll = true;
+            panel1.Controls.Add(wind_);
+            wind_.Show();
         }
     }
 }
