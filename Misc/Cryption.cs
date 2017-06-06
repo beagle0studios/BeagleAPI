@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace BeagleAPI.Misc
 {
+    /// <summary>
+    /// Verschlüsselungsklasse für Daten
+    /// </summary>
     public class Cryption
     {
         private byte[] key;
