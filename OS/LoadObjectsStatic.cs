@@ -9,6 +9,9 @@ namespace BeagleAPI.OS
 {
     public class LoadObjectsStatic
     {
+        /// <summary>
+        /// All loaded objects for OS.
+        /// </summary>
         public static List<IStdWin> LOADEDCOMPS = 
             new List<IStdWin>();
     }
