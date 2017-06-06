@@ -7,6 +7,7 @@ namespace BeagleAPI.OS
 {
     public partial class EntryPoint : StdWin
     {
+        public int Remaining = 2;
         private int timer = 0;
         private IStdWin showAfter;
         private IStdWin[] loadObjs;
@@ -41,7 +42,7 @@ namespace BeagleAPI.OS
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer++;
-            if(timer > 2)
+            if(timer > Remaining)
             {
                 showAfter.Show();
                 timer1.Stop();
