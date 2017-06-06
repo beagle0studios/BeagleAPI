@@ -22,6 +22,7 @@ namespace BeagleAPI.Window
 
     /// <summary>
     /// Stellt Funktionen bereit, die ein Fenster laut BSWINN beinhalten muss.
+    /// Kann auch von Subklassen von System.Windows.Forms.Form implementiert werden.
     /// </summary>
     public interface IStdWin : IDisposable, IBeagleable, IBeagleManagable, IBeagleMovable, IBeagleCompare, IBeaglePrint
     {
