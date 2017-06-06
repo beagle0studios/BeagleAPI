@@ -30,8 +30,14 @@ namespace BeagleAPI.Window
         bool IsLoadedToBase { get; set; }
         bool RegisterWindow();
         bool CanClose { get; set; }
+        bool ShowInTaskman { get; }
+        bool ExitOnClose { get; set; }
+        bool IsDisposed { get; }
+        bool IsActive { get; set; }
+        DateTime CreationTime { get; set; }
         #endregion
 
+        #region Methos
         void Open();
         void Open(System.Windows.Forms.Form parent);
         void CloseSelf();
@@ -41,10 +47,6 @@ namespace BeagleAPI.Window
         void Close();
         void RefreshSelf();
         void AddControl(System.Windows.Forms.Control control);
-        bool ShowInTaskman { get; }
-        bool ExitOnClose { get; set; }
-        bool IsDisposed { get; }
-        bool IsActive { get; set; }
-        DateTime CreationTime { get; set; }
+        #endregion
     }
 }
