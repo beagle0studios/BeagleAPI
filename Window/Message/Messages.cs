@@ -14,6 +14,12 @@ namespace BeagleAPI.Window.Message
     {
         public Action OnExit;
 
+        /// <summary>
+        /// Create a new message window.
+        /// </summary>
+        /// <param name="title">Message title (will be shown in uppercase)</param>
+        /// <param name="msg">Message itself</param>
+        /// <param name="showDirectly">True, if calling ShowDialog() is not neccessary.</param>
         public Messages(string title, string msg, bool showDirectly = false)
         {
             InitializeComponent();
@@ -25,13 +31,13 @@ namespace BeagleAPI.Window.Message
 
         private void buttonE1_Click(object sender, EventArgs e)
         {
-            //OnExit();
+            OnExit();
             this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           // OnExit();
+            OnExit();
             this.Close();
         }
 

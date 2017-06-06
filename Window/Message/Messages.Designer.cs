@@ -37,14 +37,14 @@
             // 
             // pnl_titlebar_exstdwin
             // 
-            this.pnl_titlebar_exstdwin.Size = new System.Drawing.Size(412, 35);
+            this.pnl_titlebar_exstdwin.Size = new System.Drawing.Size(450, 35);
             // 
             // buttonE1
             // 
-            this.buttonE1.GetParent = this;
             this.buttonE1.FlatAppearance.BorderSize = 0;
             this.buttonE1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonE1.Location = new System.Drawing.Point(314, 154);
+            this.buttonE1.GetParent = this;
+            this.buttonE1.Location = new System.Drawing.Point(284, 154);
             this.buttonE1.Name = "buttonE1";
             this.buttonE1.Size = new System.Drawing.Size(96, 32);
             this.buttonE1.TabIndex = 5;
@@ -56,7 +56,7 @@
             // 
             this.label2.Location = new System.Drawing.Point(31, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(369, 93);
+            this.label2.Size = new System.Drawing.Size(349, 93);
             this.label2.TabIndex = 6;
             this.label2.Text = "__-";
             // 
@@ -65,9 +65,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(412, 189);
+            this.ClientSize = new System.Drawing.Size(450, 229);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonE1);
+            this.CreationTime = new System.DateTime(2017, 6, 6, 9, 36, 16, 521);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -75,6 +76,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Messages";
+            this.ShowCloseButton = true;
             this.ShowInTaskbar = false;
             this.Title = "_";
             this.WINDOW_TITLE = "_";
