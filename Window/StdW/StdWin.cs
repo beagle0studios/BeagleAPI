@@ -275,7 +275,7 @@ namespace BeagleAPI.Window.StdW
 
         public void Open(Form parent)
         {
-            
+            //nothing to open
         }
 
         public void CloseSelf(CLOSE_RESULT result)
