@@ -19,6 +19,8 @@ namespace BeagleAPI.Misc
             }
         }
 
+        #region Methods
+
         /// <summary>
         /// Adds a word to a text.
         /// </summary>
@@ -89,5 +91,7 @@ namespace BeagleAPI.Misc
         {
             return v.ConvertBeagleText();
         }
+
+        #endregion
     }
 }
