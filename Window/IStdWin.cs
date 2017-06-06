@@ -48,5 +48,9 @@ namespace BeagleAPI.Window
         void RefreshSelf();
         void AddControl(System.Windows.Forms.Control control);
         #endregion
+
+        #region Indexer
+        IStdWin this[string name] { get; }
+        #endregion
     }
 }
