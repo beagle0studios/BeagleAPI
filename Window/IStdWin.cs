@@ -25,10 +25,13 @@ namespace BeagleAPI.Window
     /// </summary>
     public interface IStdWin : IDisposable, IBeagleable, IBeagleManagable, IBeagleMovable, IBeagleCompare, IBeaglePrint
     {
+        #region Properties
         string WINDOW_TITLE { get; set; }
         bool IsLoadedToBase { get; set; }
         bool RegisterWindow();
         bool CanClose { get; set; }
+        #endregion
+
         void Open();
         void Open(System.Windows.Forms.Form parent);
         void CloseSelf();
