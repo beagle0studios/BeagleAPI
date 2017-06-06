@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace BeagleAPI.Window.StdW
 {
-    public partial class StdWin : Form, IStdWin, IBeaglePrint
+    public partial class StdWin : Form, IStdWin
     {
         #region Fields
 
@@ -365,6 +365,16 @@ namespace BeagleAPI.Window.StdW
         public void RefreshSelf()
         {
             Refresh();
+        }
+
+        public bool Compare<T>(T objectToCompare)
+        {
+            return false;
+        }
+
+        public bool CompareSelf<T>(T objectToCompare, IBeagleCompare objectSelf)
+        {
+            return false;
         }
 
         #endregion

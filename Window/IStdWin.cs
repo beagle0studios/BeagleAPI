@@ -21,9 +21,9 @@ namespace BeagleAPI.Window
     }
 
     /// <summary>
-    /// Stellt Funktionen bereit, die ein Fenster laut BISO beinhalten muss.
+    /// Stellt Funktionen bereit, die ein Fenster laut BSWINN beinhalten muss.
     /// </summary>
-    public interface IStdWin : IDisposable, IBeagleable, IBeagleManagable, IBeagleMovable
+    public interface IStdWin : IDisposable, IBeagleable, IBeagleManagable, IBeagleMovable, IBeagleCompare, IBeaglePrint
     {
         string WINDOW_TITLE { get; set; }
         bool IsLoadedToBase { get; set; }
