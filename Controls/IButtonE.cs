@@ -8,6 +8,6 @@ namespace BeagleAPI.Controls
 {
     interface IButtonE
     {
-        
+        void CreateButtonE();
     }
 }
