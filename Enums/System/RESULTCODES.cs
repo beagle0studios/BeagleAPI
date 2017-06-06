@@ -12,6 +12,7 @@ namespace BeagleAPI.Enums.System
         STANDARD,
         SUCCESS,
         ERROR,
-        ERR_NOAPPOPENED
+        ERR_NOAPPOPENED,
+        ABORT
     }
 }
