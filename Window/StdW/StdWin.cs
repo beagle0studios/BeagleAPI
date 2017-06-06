@@ -322,8 +322,9 @@ namespace BeagleAPI.Window.StdW
 
         public void CloseSelf()
         {
+            //close self is not implemented yet.
         }
-        
+
         /// <summary>
         /// Stellt das Objekt dem BeagleAPI-Manager bereit.
         /// </summary>
