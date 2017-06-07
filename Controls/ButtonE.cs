@@ -12,6 +12,7 @@ namespace BeagleAPI.Controls
         public string INFORMATION;
         public IBeagleAppliance pluginReference;
         public bool EnablePreview = false;
+        public IStdWin OPEN_WINDOW;
 
         public event EventHandler<ButtonEClickedEventArgs> ButtonClicked;
         public event EventHandler<StdWinButtonClickedEventArgs> StdWinClicked;
@@ -26,7 +27,7 @@ namespace BeagleAPI.Controls
         private bool IsFullyDefined = false;
         private DesignPacks design;
 
-        public string Title
+        public BeagleAPI.Misc.Word Title
         {
             get
             {
@@ -141,6 +142,8 @@ namespace BeagleAPI.Controls
 
                 eventArgs.TimeReached = DateTime.Now;
                 eventArgs.ParentObject = this.FindForm();
+                if (OPEN_WINDOW != null)
+                    eventArgs.OpenWindow = OPEN_WINDOW;
                 OnButtonClicked(eventArgs);
             }
             else

@@ -27,17 +27,18 @@ namespace BeagleAPI.Window.Message
             label2.Text = msg;
 
             if (showDirectly) Show();
+            _windowType = WINDOWTYPE.Message;
         }
 
         private void buttonE1_Click(object sender, EventArgs e)
         {
-            OnExit();
+            //OnExit();
             this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OnExit();
+            //OnExit();
             this.Close();
         }
 

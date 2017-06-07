@@ -10,7 +10,7 @@ namespace BeagleAPI.Controls
             DocumentCompleteExtended;
 
         private Tabs.TabPageE parentedTab;
-        private string title;
+        private string title = "";
 
         public Tabs.TabPageE GetParentedTab
         {
@@ -19,6 +19,7 @@ namespace BeagleAPI.Controls
         public string DocTitle
         {
             get { return title; }
+            set { title = value; }
         }
 
         public WebBrowserE(Tabs.TabPageE tapPage)

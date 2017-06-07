@@ -223,6 +223,12 @@
     <Compile Include="Window\StdW\StdWin.Designer.cs">
       <DependentUpon>StdWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Window\StdW\StdWinBlack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window\StdW\StdWinBlack.Designer.cs">
+      <DependentUpon>StdWinBlack.cs</DependentUpon>
+    </Compile>
     <Compile Include="WinServices\ServiceConnection.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -268,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Window\StdW\StdWin.resx">
       <DependentUpon>StdWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\StdW\StdWinBlack.resx">
+      <DependentUpon>StdWinBlack.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

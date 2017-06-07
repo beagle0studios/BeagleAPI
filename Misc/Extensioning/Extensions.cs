@@ -20,5 +20,10 @@ namespace BeagleAPI.Misc.Extensioning
             else
                 return false;
         }
+
+        public static Word ConvertToWord(string v)
+        {
+            return v;
+        }
     }
 }

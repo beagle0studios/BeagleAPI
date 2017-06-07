@@ -32,90 +32,11 @@ namespace BeagleAPI.SysDebug.DelegatesEvents
     /// <summary>
     /// Caused when a buttonE was clicked.
     /// </summary>
-    public class ButtonEClickedEventArgs : BeagleEventArgs, Plugins.IBeagleHomePlugInterface
+    public class ButtonEClickedEventArgs : BeagleEventArgs
     {
         public Point ClickPosition;
         public System.Windows.Forms.Form ParentObject;
-
-        public Icon AppIcon
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string AppType
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string GetID
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string ID
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string Name
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public StdWin CreateWindow()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
-
-        public string GenerateID()
-        {
-            throw new NotImplementedException();
-        }
-
-        public StdWin Initialize()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void InstallBeagleHome()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void OpenApp()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SetAppParameters(StdWin window, string[] param_info = null)
-        {
-            throw new NotImplementedException();
-        }
+        public Window.IStdWin OpenWindow;
     }
 
     /// <summary>

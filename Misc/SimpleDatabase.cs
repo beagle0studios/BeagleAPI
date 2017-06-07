@@ -8,10 +8,10 @@ namespace BeagleAPI.Misc
 {
     class SDTest : IBeagleBase
     {
-        private string _title = "SDTEST_";
+        private Word _title = "SDTEST_";
         public int ID = 0;
 
-        public string Title
+        public Word Title
         {
             get
             {

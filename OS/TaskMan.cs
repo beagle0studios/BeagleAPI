@@ -28,11 +28,11 @@ namespace BeagleAPI.OS
         private void TaskMan_Load(object sender, EventArgs e)
         {
             int i = 0;
-            foreach (IStdWin str in new ManageHelper())
+            foreach (IStdWin str in ManageHelper.window_collection.Values)
             {
                 if (str.ShowInTaskman)
                 {
-                    listBox1.Items.Add(str.WINDOW_TITLE);
+                    listBox1.Items.Add((string)str.WINDOW_TITLE);
                     windows.Add(i, str);
                     i++;
                 }

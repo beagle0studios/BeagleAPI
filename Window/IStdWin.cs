@@ -20,6 +20,16 @@ namespace BeagleAPI.Window
         UserCloseTaskMan = 0x07
     }
 
+    public enum WINDOWTYPE
+    {
+        Standard,
+        Message,
+        Warning,
+        Error
+    }
+    //TODO:
+    //Auf dem Desktop alle WINDOW TYPES in der Taskbar gruppieren.
+
     /// <summary>
     /// Stellt Funktionen bereit, die ein Fenster laut BSWINN beinhalten muss.
     /// Kann auch von Subklassen von System.Windows.Forms.Form implementiert werden.
@@ -27,14 +37,19 @@ namespace BeagleAPI.Window
     public interface IStdWin : IDisposable, IBeagleable, IBeagleManagable, IBeagleMovable, IBeagleCompare, IBeaglePrint
     {
         #region Properties
-        string WINDOW_TITLE { get; set; }
+        Word WINDOW_TITLE { get; set; }
         bool IsLoadedToBase { get; set; }
         bool RegisterWindow();
         bool CanClose { get; set; }
         bool ShowInTaskman { get; }
         bool ExitOnClose { get; set; }
         bool IsDisposed { get; }
+        bool IsHidden { get; set; }
         bool IsActive { get; set; }
+        short ID { get; set; }
+        StdW.StdWin GetSelf { get; }
+        System.Drawing.Icon GetIcon { get; }
+        WINDOWTYPE WindowType { get; }
         DateTime CreationTime { get; set; }
         #endregion
 
@@ -43,7 +58,7 @@ namespace BeagleAPI.Window
         void Open(System.Windows.Forms.Form parent);
         void CloseSelf();
         void CloseSelf(CLOSE_RESULT result);
-        void Hide();
+        void HideWindow();
         void Show();
         void Close();
         void RefreshSelf();

@@ -5,6 +5,7 @@ using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace BeagleAPI.Window.StdW
 {
@@ -21,8 +22,8 @@ namespace BeagleAPI.Window.StdW
 
         public event EventHandler<PropertyChangedEventBeagle> PropertyChanged;
 
-        private string windowTitle;
-        public string WindowName;
+        private Word windowTitle;
+        public Word WindowName;
         private CLOSE_RESULT CLRES = CLOSE_RESULT.None;
         private DateTime creationTime;
         private bool _isDisposed;
@@ -74,10 +75,12 @@ namespace BeagleAPI.Window.StdW
         public StdWin(bool exitAppOnExitBtn)
         {
             InitializeComponent();
+            windowTitle = lblWindowTitle.Text;
             WINDOW_TITLE = windowTitle;
             WindowName = this.ToString() + WINDOW_TITLE;
-            ExitOnClose = exitAppOnExitBtn;
+            buttonStdWin1.DesignChanged += ButtonStdWin1_DesignChanged;
             ARGS_ = new PropertyChangedEventBeagle();
+            ExitOnClose = exitAppOnExitBtn;
         }
 
         public StdWin(bool HideParent, IStdWin parent)
@@ -87,7 +90,7 @@ namespace BeagleAPI.Window.StdW
             WindowName = this.ToString() + WINDOW_TITLE;
             ParentWindow = parent;
             HideParentWindow = true;
-            parent.Hide();
+            parent.HideWindow();
             ARGS_ = new PropertyChangedEventBeagle();
         }
 
@@ -96,13 +99,44 @@ namespace BeagleAPI.Window.StdW
         #region Eigenschaften
 
         [Category("Darstellung"), Description("Gibt den Titel des Fensters an.")]
-        public string Title
+        public Word Title
         {
             get { return lblWindowTitle.Text; }
             set { lblWindowTitle.Text = windowTitle = value; }
         }
 
-        public string WINDOW_TITLE
+        private bool _isHidden;
+        public bool IsHidden
+        {
+            get { return _isHidden; }
+            set { _isHidden = value; }
+        }
+
+        protected WINDOWTYPE _windowType = WINDOWTYPE.Standard;
+        public WINDOWTYPE WindowType
+        {
+            get { return _windowType; }
+        }
+
+        private short _id = (short)(new Random().Next(10000, 30000));
+        public short ID
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+
+        public bool BlackOut
+        {
+            set
+            {
+                buttonStdWin1.ForeColor = Color.White;
+                buttonStdWin1.BackColor = Color.Black;
+                lblWindowTitle.ForeColor = Color.White;
+                lblWindowTitle.BackColor = Color.Black;
+            }
+        }
+
+        public Word WINDOW_TITLE
         {
             get
             {
@@ -242,6 +276,30 @@ namespace BeagleAPI.Window.StdW
             }
         }
 
+        public StdWin GetSelf
+        {
+            get
+            {
+                return this;
+            }
+        }
+
+        public Icon GetIcon
+        {
+            get
+            {
+                return this.Icon;
+            }
+        }
+
+        public IStdWin this[string name]
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         #endregion
 
         #region Methods
@@ -291,9 +349,16 @@ namespace BeagleAPI.Window.StdW
         public void Open()
         {
             if (RegisterWindow())
+            {
+                _isHidden = false;
                 Show();
+            }
             else
             {
+                Message.Messages m =
+                    new Message.Messages("Achtung", "Es wurde bereits eine Instanz des Programms geöffnet." +
+                    Environment.NewLine + "Wir als Entwickler arbeiten bereits daran, dass " +
+                    "dann auch das offene Programm hervorgeholt wird, falls es im Hintergrund läuft.", true);
                 CLRES = CLOSE_RESULT.AlreadyOpen;
                 Close();
             }
@@ -377,7 +442,19 @@ namespace BeagleAPI.Window.StdW
         {
             return false;
         }
+        
+        private void buttonStdWin2_Click(object sender, EventArgs e)
+        {
+            this.HideWindow();
+        }
+
+        public void HideWindow()
+        {
+            _isHidden = true;
+            Hide();
+        }
 
         #endregion
+
     }
 }

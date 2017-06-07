@@ -28,7 +28,7 @@ namespace BeagleAPI.Controls
             }
         }
 
-        public string Title
+        public Word Title
         {
             get
             {

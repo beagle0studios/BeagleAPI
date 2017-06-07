@@ -12,7 +12,7 @@ namespace BeagleAPI.Misc
     /// </summary>
     public interface IBeagleBase
     {
-        string Title{ get; }
+        Word Title { get; }
         void RegisterToBaseBase();
         void UnregisterBaseBase();
     }

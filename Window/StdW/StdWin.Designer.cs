@@ -32,12 +32,14 @@
             this.buttonStdWin1 = new BeagleAPI.Controls.ButtonStdWin();
             this.windowLogoIcon = new System.Windows.Forms.PictureBox();
             this.lblWindowTitle = new System.Windows.Forms.Label();
+            this.buttonStdWin2 = new BeagleAPI.Controls.ButtonStdWin();
             this.pnl_titlebar_exstdwin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.windowLogoIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_titlebar_exstdwin
             // 
+            this.pnl_titlebar_exstdwin.Controls.Add(this.buttonStdWin2);
             this.pnl_titlebar_exstdwin.Controls.Add(this.buttonStdWin1);
             this.pnl_titlebar_exstdwin.Controls.Add(this.windowLogoIcon);
             this.pnl_titlebar_exstdwin.Controls.Add(this.lblWindowTitle);
@@ -83,6 +85,22 @@
             this.lblWindowTitle.TabIndex = 1;
             this.lblWindowTitle.Text = "stf::win::bapi";
             // 
+            // buttonStdWin2
+            // 
+            this.buttonStdWin2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonStdWin2.FlatAppearance.BorderSize = 0;
+            this.buttonStdWin2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.buttonStdWin2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonStdWin2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStdWin2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.buttonStdWin2.Location = new System.Drawing.Point(354, 0);
+            this.buttonStdWin2.Name = "buttonStdWin2";
+            this.buttonStdWin2.Size = new System.Drawing.Size(40, 37);
+            this.buttonStdWin2.TabIndex = 5;
+            this.buttonStdWin2.Text = "_";
+            this.buttonStdWin2.UseVisualStyleBackColor = true;
+            this.buttonStdWin2.Click += new System.EventHandler(this.buttonStdWin2_Click);
+            // 
             // StdWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -109,5 +127,6 @@
         protected System.Windows.Forms.PictureBox windowLogoIcon;
         public System.Windows.Forms.Panel pnl_titlebar_exstdwin;
         private Controls.ButtonStdWin buttonStdWin1;
+        private Controls.ButtonStdWin buttonStdWin2;
     }
 }

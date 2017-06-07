@@ -20,7 +20,6 @@ C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\obj\Debug\BeagleA
 C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\obj\Debug\BeagleAPI.csprojResolveAssemblyReference.cache
 C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\Project\bin\Debug\BeagleAPI.dll
 C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\Project\bin\Debug\BeagleAPI.pdb
-C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\Project\obj\Debug\BeagleAPI.csprojResolveAssemblyReference.cache
 C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\Project\obj\Debug\BeagleAPI.Controls.ButtonE.resources
 C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\Project\obj\Debug\BeagleAPI.Controls.Grouper.resources
 C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\Project\obj\Debug\BeagleAPI.OS.BaseDesktop.resources
@@ -38,3 +37,4 @@ C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\Project\obj\Debug
 C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\Project\obj\Debug\BeagleAPI.csproj.GenerateResource.Cache
 C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\Project\obj\Debug\BeagleAPI.dll
 C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\Project\obj\Debug\BeagleAPI.pdb
+C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\Project\obj\Debug\BeagleAPI.Window.StdW.StdWinBlack.resources
