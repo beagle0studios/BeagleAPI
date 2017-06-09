@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Attributes\AttributeUsage.cs" />
     <Compile Include="Attributes\BeagleAttrAttribute.cs" />
+    <Compile Include="Attributes\StdWinComposerAttribute.cs" />
     <Compile Include="Controls\ButtonE.cs">
       <SubType>Component</SubType>
     </Compile>
