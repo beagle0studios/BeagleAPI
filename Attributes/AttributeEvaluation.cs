@@ -11,7 +11,7 @@ namespace BeagleAPI.Attributes
 {
     public sealed class AttributeEvaluation
     {
-        public static void Initialize<TAttr>(Type UClass, params string[] methodNames) where TAttr : Attribute
+        public static void Initialize<TAttr>(Type UClass, params string[] methodNames) where TAttr : BeagleBaseAttribute
         {
             Type tDemo = UClass;
             Type tAttr = typeof(TAttr);
@@ -27,6 +27,8 @@ namespace BeagleAPI.Attributes
             if (attr != null)
             {
                 //Attribut gesetzt.
+                Messages m = new Messages("Achtung!",
+                    "Die Klasse '" + tDemo.ToString() + " hat das angegebene Attribut.", true);
             }
             else
             {
@@ -34,6 +36,17 @@ namespace BeagleAPI.Attributes
                     "Die Klasse '" + tDemo.ToString() + " hat das angegebene Attribut nicht gesetzt.", true);
             }
 
+            foreach (MethodInfo mInfM in mInfos)
+            {
+                attr = (TAttr)Attribute.GetCustomAttribute(mInfM, tAttr);
+
+                if (attr != null)
+                {
+                    MessageBox.Show("Name of Method: " + attr.Name);
+                }
+                else
+                    MessageBox.Show("Method has no attribute.");
+            }
             //// Prüfen, ob das Attribut bei der Methode 'DoSomething' gesetzt ist
             //attr = (BeagleAttrAttribute)Attribute.GetCustomAttribute(mInfo1, tAttr);
 

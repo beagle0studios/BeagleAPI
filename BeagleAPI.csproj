@@ -51,6 +51,7 @@
     <Compile Include="Attributes\AttributeEvaluation.cs" />
     <Compile Include="Attributes\AttributeUsage.cs" />
     <Compile Include="Attributes\BeagleAttrAttribute.cs" />
+    <Compile Include="Attributes\PrintableAttribute.cs" />
     <Compile Include="Attributes\StdWinComposerAttribute.cs" />
     <Compile Include="Controls\ButtonE.cs">
       <SubType>Component</SubType>
@@ -140,6 +141,7 @@
     <Compile Include="Misc\SearchFor.cs" />
     <Compile Include="Misc\SimpleDatabase.cs" />
     <Compile Include="Misc\BeagleText.cs" />
+    <Compile Include="Misc\WindowToScreen.cs" />
     <Compile Include="Misc\Word.cs" />
     <Compile Include="OS\BaseDesktop.cs">
       <SubType>Form</SubType>
