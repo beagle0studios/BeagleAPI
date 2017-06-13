@@ -1,27 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BeagleAPI.Window.StdW;
-using System.Reflection;
+﻿using BeagleAPI.Attributes;
 using BeagleAPI.Window.Message;
-using BeagleAPI.Attributes;
+using BeagleAPI.Window.StdW;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace BeagleAPI.Misc
 {
-    public class WindowToScreen<TWindow> where TWindow : StdWin
+    /// <summary>
+    /// Bietet die Möglichkeit, ein angegebenes Fenser in einem Bild zu speichern.
+    /// </summary>
+    public class WindowToScreen
     {
-        private TWindow screenWindow;
+        private Type _windowType;
+        private StdWin screenWindow;
 
-        public WindowToScreen(TWindow window) 
+        /// <summary>
+        /// Constructor für die Klasse. Erstellt ein neues Objekt.
+        /// </summary>
+        /// <param name="windowType">Der Typ der Klasse, von der ein Bild erstellt werden soll. "typeof()"</param>
+        /// <param name="window">Die Instanz der Klasse, von der ein Bild erstellt werden soll.</param>
+        public WindowToScreen(Type windowType, StdWin window) 
         {
             screenWindow = window;
+            _windowType = windowType;
         }
 
-        public void CopyToScreen()
+        /// <summary>
+        /// Erstellt ein Bild des Fensters.
+        /// </summary>
+        /// <param name="path">Der absolute Speicherort des Bildes.</param>
+        public void CopyToScreen(string path)
         {
-            Type tWindow = typeof(TWindow);
+            Type tWindow = _windowType;
             Type tAttr = typeof(PrintableAttribute);
 
             // Prüfen, ob das Attribut bei der Klasse 'tWindow' gesetzt ist
@@ -29,11 +40,23 @@ namespace BeagleAPI.Misc
                 (PrintableAttribute)Attribute.GetCustomAttribute(tWindow, tAttr);
             if (attr != null)
             {
-                //Attribut gesetzt.
-                Messages m = new Messages("Copy to screen!",
-                    tWindow.ToString() + " wird in ein Bild verwandelt."
+                var frm = screenWindow;
+
+                Cursor.Current = Cursors.WaitCursor;
+                frm.Enabled = false;
+                var bmp = new Bitmap(frm.Width, frm.Height);
+
+                frm.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+                bmp.Save(path);
+
+                frm.Enabled = true;
+                Cursor.Current = Cursors.Default;
+
+                Messages m = new Messages("Bild wurde gespeichert!",
+                    tWindow.ToString() + " wurde in einem Bild gespeichert."
                     + Environment.NewLine
-                    + "Titlebar mitprinten: " + attr.PrintTitlebar.ToString(), true);
+                    + "Speicherort: " + path, true);
+
             }
             else
             {

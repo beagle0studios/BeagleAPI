@@ -58,10 +58,10 @@ namespace BeagleAPI.Window.StdW
             switch (e.designPack)
             {
                 case Enums.System.DesignPacks.Standard:
-                    e.button.ForeColor = System.Drawing.Color.Black;
+                    e.button.ForeColor = Color.Black;
                     break;
                 case Enums.System.DesignPacks.Inverted:
-                    e.button.ForeColor = System.Drawing.Color.White;
+                    e.button.ForeColor = Color.White;
                     break;
                 default:
                     break;
@@ -169,7 +169,7 @@ namespace BeagleAPI.Window.StdW
             }
         }
 
-        public System.Drawing.Color WindowTitleColor
+        public Color WindowTitleColor
         {
             get { return lblWindowTitle.ForeColor; }
             set { lblWindowTitle.ForeColor = value; }
