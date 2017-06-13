@@ -9,7 +9,9 @@ namespace BeagleAPI.Attributes
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]
     public class PrintableAttribute : Attribute
     {
+        private bool _printTitlebar = true;
+
         public bool PrintTitlebar
-        { get; set; }
+        { get { return _printTitlebar; } set { _printTitlebar = value; } }
     }
 }

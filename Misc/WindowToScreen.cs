@@ -40,6 +40,9 @@ namespace BeagleAPI.Misc
                 (PrintableAttribute)Attribute.GetCustomAttribute(tWindow, tAttr);
             if (attr != null)
             {
+                if (!attr.PrintTitlebar)
+                    screenWindow.pnl_titlebar_exstdwin.Visible = false;
+
                 var frm = screenWindow;
 
                 Cursor.Current = Cursors.WaitCursor;
@@ -51,6 +54,9 @@ namespace BeagleAPI.Misc
 
                 frm.Enabled = true;
                 Cursor.Current = Cursors.Default;
+                
+                if (!attr.PrintTitlebar)
+                    screenWindow.pnl_titlebar_exstdwin.Visible = true;
 
                 Messages m = new Messages("Bild wurde gespeichert!",
                     tWindow.ToString() + " wurde in einem Bild gespeichert."
