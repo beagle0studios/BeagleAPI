@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\AttributeEvaluation.cs" />
     <Compile Include="Attributes\AttributeUsage.cs" />
     <Compile Include="Attributes\BeagleAttrAttribute.cs" />
     <Compile Include="Attributes\StdWinComposerAttribute.cs" />

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace BeagleAPI.Attributes
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]
-    public sealed class StdWinComposerAttribute : Attribute
+    public class StdWinComposerAttribute : Attribute
     {
         private string _windowname;
         private long _windowid = 0;

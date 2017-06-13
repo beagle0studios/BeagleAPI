@@ -38,3 +38,4 @@ C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\Project\obj\Debug
 C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\Project\obj\Debug\BeagleAPI.dll
 C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\Project\obj\Debug\BeagleAPI.pdb
 C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\Project\obj\Debug\BeagleAPI.Window.StdW.StdWinBlack.resources
+C:\Users\sebas\Documents\Visual Studio 2015\Projects\BeagleAPI\Project\obj\Debug\BeagleAPI.csprojResolveAssemblyReference.cache
