@@ -81,9 +81,9 @@
             this.lblWindowTitle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblWindowTitle.Location = new System.Drawing.Point(27, 5);
             this.lblWindowTitle.Name = "lblWindowTitle";
-            this.lblWindowTitle.Size = new System.Drawing.Size(100, 20);
+            this.lblWindowTitle.Size = new System.Drawing.Size(174, 20);
             this.lblWindowTitle.TabIndex = 1;
-            this.lblWindowTitle.Text = "stf::win::bapi";
+            this.lblWindowTitle.Text = "Application has no Title";
             // 
             // buttonStdWin2
             // 

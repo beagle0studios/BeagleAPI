@@ -276,6 +276,7 @@ namespace BeagleAPI.Window.StdW
             }
         }
 
+<<<<<<< HEAD
         public StdWin GetSelf
         {
             get
@@ -292,6 +293,8 @@ namespace BeagleAPI.Window.StdW
             }
         }
 
+=======
+>>>>>>> STDWIN
         public IStdWin this[string name]
         {
             get
