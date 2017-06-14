@@ -242,6 +242,14 @@ namespace BeagleAPI.Window.StdW
             }
         }
 
+        public IStdWin this[string name]
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         #endregion
 
         #region Methods
