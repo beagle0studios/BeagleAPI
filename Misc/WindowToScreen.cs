@@ -29,7 +29,7 @@ namespace BeagleAPI.Misc
         /// <summary>
         /// Erstellt ein Bild des Fensters.
         /// </summary>
-        /// <param name="path">Der absolute Speicherort des Bildes.</param>
+        /// <param name="path">Der absolute Speicherpfad des Bildes.</param>
         public void CopyToScreen(string path)
         {
             Type tWindow = _windowType;
@@ -68,7 +68,7 @@ namespace BeagleAPI.Misc
             {
                 Messages m = new Messages("Achtung!",
                     "Die Klasse '" + tWindow.ToString() +
-                    " muss das Attribut \"Printable\" gesetzt haben.", true);
+                    "' muss das Attribut \"Printable\" gesetzt haben.", true);
             }
         }
     }

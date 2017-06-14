@@ -136,6 +136,7 @@
     <Compile Include="Misc\Initialization.cs" />
     <Compile Include="Misc\IPrinter.cs" />
     <Compile Include="Misc\MultithreadingTimer.cs" />
+    <Compile Include="Misc\PointB.cs" />
     <Compile Include="Misc\Printer.cs" />
     <Compile Include="Misc\ProtectionManager.cs" />
     <Compile Include="Misc\SearchFor.cs" />
