@@ -44,6 +44,22 @@ namespace BeagleAPI.Attributes
                 Console.WriteLine("DoMore hat das Attribut nicht.");
             Console.ReadLine();
         }
+
+        //another method
+        public static object[] TestForAttribute(Type typ, bool inherit)
+        {
+            object[] temp;
+            MemberInfo info = typ;
+            object[] attributes = info.GetCustomAttributes(inherit);
+
+            temp = new object[attributes.Length];
+
+            for (int i = 0; i < attributes.Length; i++)
+            {
+                temp[i] = attributes[i];
+            }
+            return temp;
+        }
     }
 
     [BeagleAttr("Klasse")]

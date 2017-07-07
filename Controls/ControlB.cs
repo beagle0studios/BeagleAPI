@@ -15,6 +15,19 @@ namespace BeagleAPI.Controls
 {
     public partial class ControlB : UserControl, IControlB, IBeagleBase
     {
+        public BeagleBaseType BBaseType
+        {
+            get
+            {
+                return BeagleBaseType.Button;
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         public IStdWin GetParent
         {
             get
@@ -67,7 +80,7 @@ namespace BeagleAPI.Controls
 
         public void RegisterToBaseBase()
         {
-            BeagleAPI.Misc.BeagleBaseBase.ALLBEAGLES.Add(Name, this);
+            BeagleBaseBase.ALLBEAGLES.Add(Name, this);
         }
 
         public void UnregisterBaseBase()

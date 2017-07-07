@@ -4,10 +4,11 @@ using BeagleAPI.Window;
 using System;
 using System.Windows.Forms;
 using BeagleAPI.Enums.System;
+using BeagleAPI.Misc;
 
 namespace BeagleAPI.Controls
 {
-    public partial class ButtonE : Button, IControlB, Misc.IBeagleBase
+    public partial class ButtonE : Button, IControlB, IBeagleBase
     {
         public string INFORMATION;
         public IBeagleAppliance pluginReference;
@@ -27,7 +28,7 @@ namespace BeagleAPI.Controls
         private bool IsFullyDefined = false;
         private DesignPacks design;
 
-        public BeagleAPI.Misc.Word Title
+        public Word Title
         {
             get
             {
@@ -45,6 +46,18 @@ namespace BeagleAPI.Controls
             set
             {
                 PARENT_WIND = value;
+            }
+        }
+
+        public BeagleBaseType BBaseType
+        {
+            get
+            {
+                return BeagleBaseType.Button;
+            }
+
+            set
+            {
             }
         }
 

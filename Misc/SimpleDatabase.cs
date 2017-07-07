@@ -20,6 +20,19 @@ namespace BeagleAPI.Misc
             set { _title = value; }
         }
 
+        public BeagleBaseType BBaseType
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         public void RegisterToBaseBase()
         { }
 

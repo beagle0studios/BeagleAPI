@@ -1,4 +1,5 @@
 ﻿using BeagleAPI.Misc;
+using BeagleAPI.SysDebug;
 using BeagleAPI.SysDebug.DelegatesEvents;
 using BeagleAPI.Window.Manager;
 using System;
@@ -9,7 +10,7 @@ using System.Drawing;
 
 namespace BeagleAPI.Window.StdW
 {
-    public partial class StdWin : Form, IStdWin
+    public partial class StdWin : Form, IStdWin, IBeagleConvertible
     {
         #region Fields
 
@@ -276,7 +277,6 @@ namespace BeagleAPI.Window.StdW
             }
         }
 
-<<<<<<< HEAD
         public StdWin GetSelf
         {
             get
@@ -293,8 +293,13 @@ namespace BeagleAPI.Window.StdW
             }
         }
 
-=======
->>>>>>> STDWIN
+        public BeagleBaseType BBaseType
+        {
+            get { return BeagleBaseType.Window; }
+
+            set { }
+        }
+
         public IStdWin this[string name]
         {
             get
@@ -455,6 +460,37 @@ namespace BeagleAPI.Window.StdW
         {
             _isHidden = true;
             Hide();
+        }
+
+        public void ConvertTo(IBeagleBase baseObject, IBeagleBase obj, BeagleBaseType toBeagle)
+        {
+            switch (baseObject.BBaseType)
+            {
+                case BeagleBaseType.Window:
+                    switch (toBeagle)
+                    {
+                        case BeagleBaseType.Button:
+                            Controls.ButtonE buttonE = new Controls.ButtonE();
+                            buttonE.Text = baseObject.Title;
+                            break;
+                        case BeagleBaseType.Textbox:
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case BeagleBaseType.Button:
+                    break;
+                case BeagleBaseType.Textbox:
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public void UndoConversion()
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

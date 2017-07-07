@@ -51,6 +51,7 @@
     <Compile Include="Attributes\AttributeEvaluation.cs" />
     <Compile Include="Attributes\AttributeUsage.cs" />
     <Compile Include="Attributes\BeagleAttrAttribute.cs" />
+    <Compile Include="Attributes\BebugAttribute.cs" />
     <Compile Include="Attributes\PrintableAttribute.cs" />
     <Compile Include="Attributes\StdWinComposerAttribute.cs" />
     <Compile Include="Controls\ButtonE.cs">
@@ -128,6 +129,7 @@
     <Compile Include="Misc\IBeagleable.cs" />
     <Compile Include="Misc\IBeagleBase.cs" />
     <Compile Include="Misc\IBeagleCompare.cs" />
+    <Compile Include="Misc\IBeagleConvertible.cs" />
     <Compile Include="Misc\IBeagleManagable.cs" />
     <Compile Include="Misc\IBeagleMovable.cs" />
     <Compile Include="Misc\IBeaglePrint.cs" />
@@ -157,6 +159,7 @@
     <Compile Include="OS\BOSSWnd.Designer.cs">
       <DependentUpon>BOSSWnd.cs</DependentUpon>
     </Compile>
+    <Compile Include="OS\CheckAttribs.cs" />
     <Compile Include="OS\EntryPoint.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +192,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="StandardMessageCentre\SMC.cs" />
+    <Compile Include="SysDebug\ControlSystem.cs" />
     <Compile Include="SysDebug\Counter_D.cs" />
     <Compile Include="SysDebug\DelegatesEvents\DelegatesNames.cs" />
     <Compile Include="SysDebug\DelegatesEvents\EventArgs_B.cs" />
